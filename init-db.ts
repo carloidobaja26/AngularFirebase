@@ -4,14 +4,31 @@ import {COURSES, findLessonsForCourse} from './db-data';
 import * as firebase from 'firebase';
 
 var config = {
-  apiKey: "AIzaSyDAdoefqX5OqjkD3BkW25ZAL6XYZMo4Vz8",
-  authDomain: "fir-course-17549.firebaseapp.com",
-  databaseURL: "https://fir-course-17549.firebaseio.com",
-  projectId: "fir-course-17549",
-  storageBucket: "fir-course-17549.appspot.com",
-  messagingSenderId: "170806523820",
-  appId: "1:170806523820:web:a3181632d54d076a0bec09"
+  // apiKey: "AIzaSyDAdoefqX5OqjkD3BkW25ZAL6XYZMo4Vz8",
+  // authDomain: "fir-course-17549.firebaseapp.com",
+  // databaseURL: "https://fir-course-17549.firebaseio.com",
+  // projectId: "fir-course-17549",
+  // storageBucket: "fir-course-17549.appspot.com",
+  // messagingSenderId: "170806523820",
+  // appId: "1:170806523820:web:a3181632d54d076a0bec09"
+  apiKey: "AIzaSyBGKq0kvLNVZpE5yoKbH8x9kY7J30xmaTU",
+  authDomain: "fir-course-c1ca6.firebaseapp.com",
+  projectId: "fir-course-c1ca6",
+  storageBucket: "fir-course-c1ca6.appspot.com",
+  messagingSenderId: "1087119503809",
+  appId: "1:1087119503809:web:964f3c3aa71dc05d7e7f40",
+  measurementId: "G-6JFFS63HR9"
 };
+// var firebaseConfig = {
+//   apiKey: "AIzaSyBGKq0kvLNVZpE5yoKbH8x9kY7J30xmaTU",
+//   authDomain: "fir-course-c1ca6.firebaseapp.com",
+//   projectId: "fir-course-c1ca6",
+//   storageBucket: "fir-course-c1ca6.appspot.com",
+//   messagingSenderId: "1087119503809",
+//   appId: "1:1087119503809:web:964f3c3aa71dc05d7e7f40",
+//   measurementId: "G-6JFFS63HR9"
+// };
+
 
 console.log("Uploading data to the database with the following config:\n");
 

@@ -1,30 +1,37 @@
-import * as functions from 'firebase-functions';
-import {db} from './init';
-
-
+import * as functions from "firebase-functions";
 import * as express from "express";
-const cors = require('cors');
+import {db} from './init';
+// // Start writing Firebase Functions
+// // https://firebase.google.com/docs/functions/typescript
+//
 
-const app = express();
 
-app.use(cors({origin:true}));
-
-
-app.get('/courses', async (request, response) => {
-
-    const snaps = await db.collection('courses').get();
-
-    const courses:any[] = [];
-
-    snaps.forEach(snap => courses.push(snap.data()));
-
-    response.status(200).json({courses});
-
+export const helloWorld = functions.https.onRequest((request, response) => {
+  // functions.logger.info("Hello logs!", {structuredData: true});
+  response.status(200).json({message: "Hello World!"});
 });
+// const cors = require('cors');
+
+// const app = express();
+
+// app.use(cors({origin:true}));
 
 
-export const getCourses = functions.https.onRequest(app);
+// app.get('/courses', async (request, response) => {
 
-export {onAddLesson, onDeleteLesson} from './lessons-counter';
+//     const snaps = await db.collection('courses').get();
 
-export {resizeThumbnail} from './image-upload';
+//     const courses:any[] = [];
+
+//     snaps.forEach(snap => courses.push(snap.data()));
+
+//     response.status(200).json({courses});
+
+// });
+
+
+// export const getCourses = functions.https.onRequest(app);
+
+// export {onAddLesson, onDeleteLesson} from './lessons-counter';
+
+// export {resizeThumbnail} from './image-upload';

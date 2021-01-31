@@ -12,10 +12,9 @@ export class CoursesCardListComponent implements OnInit {
 
     @Input()
     courses: Course[];
-
+    
     @Output()
     courseEdited = new EventEmitter();
-
     constructor(private dialog: MatDialog) {
     }
 
@@ -34,11 +33,12 @@ export class CoursesCardListComponent implements OnInit {
 
         this.dialog.open(CourseDialogComponent, dialogConfig)
             .afterClosed()
-            .subscribe(val => {
+            .subscribe (val => {
                 if (val) {
                     this.courseEdited.emit();
                 }
             });
+            
 
     }
 

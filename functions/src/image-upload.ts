@@ -1,4 +1,3 @@
-
 import * as functions from 'firebase-functions';
 import {db} from './init';
 const path = require("path");
@@ -86,20 +85,6 @@ export const resizeThumbnail = functions.storage.object()
 
 
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
